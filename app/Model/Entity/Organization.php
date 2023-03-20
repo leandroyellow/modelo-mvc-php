@@ -14,7 +14,7 @@ class Organization {
    * nome da organização
    * @var string
    */
-  public $name = 'lean';
+  public $name = 'leandro';
 
   
   /**

@@ -24,6 +24,6 @@ class About extends Page
     ]);
 
     //retorna  a view da página
-    return parent::getPage('sobre', $content);
+    return parent::getPage('cadastroUsuario', $content);
   }
 }

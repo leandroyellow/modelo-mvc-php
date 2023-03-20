@@ -16,6 +16,13 @@ $obRouter->get('/sobre', [
   }
 ]);
 
+//ROTA CADASTRO USUÁRIO
+$obRouter->get('/cadastroUsuario', [
+  function() {
+    return new Response(200, Pages\FormUser::getFormUser());
+  }
+]);
+
 //ROTA DINÂMICA
 $obRouter->get('/pagina/{idPagina}/{acao}', [
   function($idPagina, $acao) {

@@ -74,9 +74,6 @@ class Router
       }
     }
 
-    //PADRÃO DE VALIDAÇÃO DA URL
-    $patternRoute = '/^' . str_replace('/', '\/', $route) . '$/';
-
     //VARIÁVEIS DA ROTA
     $params['variables'] = [];
 
@@ -86,6 +83,9 @@ class Router
       $route = preg_replace($patternVariable, '(.*?)', $route);
       $params['variables'] = $matches[1];
     }
+
+    //PADRÃO DE VALIDAÇÃO DA URL
+    $patternRoute = '/^' . str_replace('/', '\/', $route) . '$/';
 
     //ADICIONA A ROTA DENTRO DA CLASSE
     $this->routes[$patternRoute][$method] = $params;
