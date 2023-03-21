@@ -23,6 +23,24 @@ $obRouter->get('/cadastroUsuario', [
   }
 ]);
 
+//ROTA CADASTRO DEPOIMENTOS
+$obRouter->get('/depoimentos', [
+  function() {
+    return new Response(200, Pages\Testimony::getTestimony());
+  }
+]);
+
+//ROTA CADASTRO DEPOIMENTOS (INSERT)
+$obRouter->post('/depoimentos', [
+  function($request) {
+    echo '<pre>';
+    echo print_r($request);
+    echo '<pre>'; exit;
+    return new Response(200, Pages\Testimony::getTestimony());
+
+  }
+]);
+
 //ROTA DINÂMICA
 $obRouter->get('/pagina/{idPagina}/{acao}', [
   function($idPagina, $acao) {

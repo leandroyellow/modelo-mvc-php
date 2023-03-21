@@ -29,6 +29,10 @@ switch (valor) {
   case "cadastroUsuario":
     document.querySelector('#btn-cadastroUsuario').classList.add('active');
     break;
+  
+  case "depoimentos":
+    document.querySelector('#btn-depoimentos').classList.add('active');
+    break;
 
   default:
     break;

@@ -9,19 +9,19 @@ class FormUser extends Page
 {
 
   /**
-   * Método responável por retornar (view) da nossa página de sobre
+   * Método responável por retornar (view) da nossa página de formulário
    * @return string
    */
   public static function getFormUser()
   {
     $obOrganization = new Organization;
 
-    //view da home
+    //VIEW DO FORMUÁRIO
     $content = View::render('pages/cadastroUsuario', [
       'name' => $obOrganization->name,
     ]);
 
-    //retorna  a view da página
-    return parent::getPage('sobre', $content);
+    //RETORNA A VIEW DA PÁGINA
+    return parent::getPage('formulário', $content);
   }
 }
