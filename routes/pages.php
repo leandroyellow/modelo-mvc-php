@@ -2,6 +2,8 @@
 use \App\Http\Response;
 use \App\Controller\Pages;
 
+use \App\Db\Database;
+
 //ROTA HOME
 $obRouter->get('/', [
   function() {
@@ -33,11 +35,7 @@ $obRouter->get('/depoimentos', [
 //ROTA CADASTRO DEPOIMENTOS (INSERT)
 $obRouter->post('/depoimentos', [
   function($request) {
-    echo '<pre>';
-    echo print_r($request);
-    echo '<pre>'; exit;
-    return new Response(200, Pages\Testimony::getTestimony());
-
+    return new Response(200, Pages\Testimony::insertTestimony($request));
   }
 ]);
 
